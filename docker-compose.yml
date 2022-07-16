@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  todoapi:
+    image: todoapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - HOST=
+      - UID=
+      - PWD=
+      - Database=todo-db
+      - JWT_PUBLIC_KEY=
+    ports:
+      - 2000:2001
